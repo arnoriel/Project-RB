@@ -33,7 +33,7 @@
         </div>
 
         <div class="row gy-4">
-          <div class="col-lg-7 position-relative about-img" style="background-image: {{ asset('Yummy/assets/img/about.jpg')}} ;" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-lg-7 position-relative about-img" style="background-image: url({{ asset('Yummy/assets/img/about.jpg')}}) ;" data-aos="fade-up" data-aos-delay="150">
             <div class="call-us position-absolute">
               <h4>Book a Table</h4>
               <p>+1 5589 55488 55</p>
@@ -187,40 +187,26 @@
             </div>
 
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <span>Resep Lengkap</span>
-                            </div>
-                            <div class="car-body">
-                                <div class="table-responsive">
-                                    <table class="table" id="myTable">
-                                        @php $no=1 @endphp
-                                        @foreach ($resep as $data)
-                                                <td>
-                                                    <div class="card" style="width: 18rem">
-                                                        <img src="{{$data->cover()}}" alt="">
-                                                        <div class="card-body">
-                                                          <h5 class="card-title">{{$data->nama}}</h5>
-                                                          <p class="card-text">{{$data->deskripsi}}</p>
-                                                          <a href="/member/resep/{{$data->id}}" class="btn btn-outline-danger">Show</a>
-                                                        </div>
-                                                      </div>
-                                                    </td>
-                                        @endforeach
-                                    </table>
-                                </div>
-                            </div>
+
+              <div class="row">
+                @foreach ($resep as $data)
+                    <div class="col-sm-4 mb-4">
+                      <div class="card" style="">
+                        <img src="{{$data->cover()}}" style="height: 200px; object-fit: cover;" class="img-fluid" alt="">
+                        <div class="card-body">
+                          <h5 class="card-title">{{$data->nama}}</h5>
+                          <p class="card-text">{{ Str::words($data->deskripsi, 6)}}</p>
+                          <a href="/member/resep/{{$data->id}}" class="btn btn-outline-danger">Show</a>
                         </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-
-
-        </div>
+                @endforeach
+              </div>
+             
+                
 
       </div>
+          </div>
     </section><!-- End Menu Section -->
 
     <!-- ======= Testimonials Section ======= -->
@@ -350,7 +336,7 @@
         <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-1.jpg)">
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url({{ asset('Yummy/assets/img/events-1.jpg') }})">
               <h3>Custom Parties</h3>
               <div class="price align-self-start">$99</div>
               <p class="description">
@@ -358,7 +344,7 @@
               </p>
             </div><!-- End Event item -->
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-2.jpg)">
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url({{ asset('Yummy/assets/img/events-2.jpg') }})">
               <h3>Private Parties</h3>
               <div class="price align-self-start">$289</div>
               <p class="description">
@@ -366,7 +352,7 @@
               </p>
             </div><!-- End Event item -->
 
-            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url(assets/img/events-3.jpg)">
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url({{ asset('Yummy/assets/img/events-3.jpg') }})">
               <h3>Birthday Parties</h3>
               <div class="price align-self-start">$499</div>
               <p class="description">
@@ -465,7 +451,7 @@
 
         <div class="row g-0">
 
-          <div class="col-lg-4 reservation-img" style="background-image: url(assets/img/reservation.jpg);" data-aos="zoom-out" data-aos-delay="200"></div>
+          <div class="col-lg-4 reservation-img" style="background-image: url({{ asset('Yummy/assets/img/reservation.jpg') }});" data-aos="zoom-out" data-aos-delay="200"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
             <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">

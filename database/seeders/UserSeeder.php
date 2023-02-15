@@ -36,9 +36,9 @@ class UserSeeder extends Seeder
 
          //membuat sample admin kedua (Bisa di custom Sendiri)
          $admin = new User;
-         $admin->name = "namakamu";
-         $admin->email = "namakm@gmail.com";
-         $admin->password = bcrypt("namamu");
+         $admin->name = "Arno";
+         $admin->email = "cellestinocasso20@gmail.com";
+         $admin->password = bcrypt("yareyare");
          $admin->save();
          $admin->attachRole($adminRole);
 
@@ -52,9 +52,9 @@ class UserSeeder extends Seeder
 
          //membuat sample member kedua (Bisa di custom Sendiri)
          $member = new User;
-         $member->name = "namakamu";
-         $member->email = "namamu@gmail.com";
-         $member->password = bcrypt("namamu");
+         $member->name = "Arno";
+         $member->email = "cellestinocasso@gmail.com";
+         $member->password = bcrypt("yareyare");
          $member->save();
          $member->attachRole($memberRole);
 

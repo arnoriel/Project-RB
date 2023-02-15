@@ -9,7 +9,7 @@
 		<meta content="" name="keywords">
 	  
 		<!-- Favicons -->
-		<link href="{{ asset('admin/static/img/icons/arno.png') }}" rel="icon">
+		<link href="{{ asset('Yummy/assets/img/icons/logorb.png') }}" rel="icon">
 		<link href="{{ asset('NiceAdmin/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 	  
 		<!-- Google Fonts -->
