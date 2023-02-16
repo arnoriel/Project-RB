@@ -9,8 +9,8 @@ class resep extends Model
 {
     use HasFactory;
 
-    protected $visible = ['cover', 'nama', 'bahan', 'bumbu', 'bahancemplung', 'caramembuat'];
-    protected $fillable = ['cover', 'nama', 'bahan', 'bumbu', 'bahancemplung', 'caramembuat'];
+    protected $visible = ['cover', 'nama', 'deskripsi', 'bahan', 'bumbu', 'bahancemplung', 'caramembuat'];
+    protected $fillable = ['cover', 'nama', 'deskripsi', 'bahan', 'bumbu', 'bahancemplung', 'caramembuat'];
     public $timestamps = true;
 
     public function cover()

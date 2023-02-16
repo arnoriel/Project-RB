@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\resep;
+use App\Models\minum;
 use Illuminate\Http\Request;
 use Alert;
 
@@ -23,7 +24,8 @@ class ResepController extends Controller
     public function resepMember()
     {
         $resep=Resep::all();
-        return view ('member.index2', compact ('resep'));
+        $minum=Minum::all();
+        return view ('member.index2', compact ('resep', 'minum'));
     }
 
     /**

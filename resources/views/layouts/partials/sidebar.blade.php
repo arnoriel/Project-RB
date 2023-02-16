@@ -20,6 +20,15 @@
         </a>
       </li><!-- End Profile Page Nav -->
       @endrole
+
+      @role('admin')
+      <li class="nav-item">
+        <a class="nav-link {{ Request::is('administrator/minum') ? '' : 'collapsed' }}" href="/administrator/minum">
+          <i class="bi bi-book"></i>
+          <span>Resep Minuman</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+      @endrole
     
       @role('member')
       <li class="nav-item">

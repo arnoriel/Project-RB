@@ -22,48 +22,34 @@
                             <label for=""><h5>Preview Gambar</h5></label>
                             <br>
                             </br>
-                            <img src="{{$resep->cover()}}" width="500px" height="300px">
+                            <img src="{{$minum->cover()}}" width="500px" height="300px">
                             <br>
                             </br>
                             <div class="card border-danger mb-3">
-                                <div class="card-header text-danger"><h5>Nama Resep</h5></div>
+                                <div class="card-header text-danger"><h5>Nama Resep Minuman</h5></div>
                                 <div class="card-body">
-                                  <h5 class="card-title">{{$resep->nama}}</h5>
+                                  <h5 class="card-title">{{$minum->nama}}</h5>
                                 </div>
                               </div>
                               <br>
                               <div class="card border-danger mb-3">
                                 <div class="card-header text-danger"><h5>Deskripsi</h5></div>
                                 <div class="card-body">
-                                  <h5 class="card-title">{{$resep->deskripsi}}</h5>
+                                  <h5 class="card-title">{{$minum->deskripsi}}</h5>
                                 </div>
                               </div>
                               <br>
                               <div class="card border-danger mb-3">
-                                <div class="card-header text-danger"><h5>Bahan Resep</h5></div>
+                                <div class="card-header text-danger"><h5>Bahan Minuman</h5></div>
                                 <div class="card-body">
-                                  <h5 class="card-title">{{$resep->bahan}}</h5>
-                                </div>
-                              </div>
-                              <br>
-                              <div class="card border-danger mb-3">
-                                <div class="card-header text-danger"><h5>Bumbu Resep</h5></div>
-                                <div class="card-body">
-                                  <h5 class="card-title">{{$resep->bumbu}}</h5>
-                                </div>
-                            </div>
-                              <br>
-                              <div class="card border-danger mb-3">
-                                <div class="card-header text-danger"><h5>Bahan Cemplung</h5></div>
-                                <div class="card-body">
-                                  <h5 class="card-title">{{$resep->bahancemplung}}</h5>
+                                  <h5 class="card-title">{{$minum->bahan}}</h5>
                                 </div>
                               </div>
                             <br>
                               <div class="card border-danger mb-3">
                                 <div class="card-header text-danger"><h5>Cara Membuat</h5></div>
                                 <div class="card-body">
-                                  <h5 class="card-title">{{$resep->caramembuat}}</h5>
+                                  <h5 class="card-title">{{$minum->caramembuat}}</h5>
                                 </div>
                               </div>
                         </div>

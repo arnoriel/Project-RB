@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ResepController;
+use App\Http\Controllers\MinumController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,10 +31,14 @@ function () {
     Route::get('/resep', function () {
         return view('admin.resep');
     });
+    Route::get('/minum', function () {
+        return view('admin.minum');
+    });
     Route::get('/logout', function () {
         return view('views.home');
     });
     Route::resource('/resep', ResepController::class);
+    Route::resource('/minum', MinumController::class);
 });
 
 Route::group(['prefix' => 'member', 'middleware' => ['auth']],
@@ -49,6 +54,8 @@ function () {
     // Route::resource('/resep', ResepController::class);
     Route::get('/', [App\Http\Controllers\ResepController::class, 'resepMember']);
     Route::get('/resep', [App\Http\Controllers\ResepController::class, 'resepMember']);
+    Route::get('/minum', [App\Http\Controllers\MinumController::class, 'minumMember']);
     Route::get('/resep/{id}', [App\Http\Controllers\ResepController::class, 'detail']);
+    Route::get('/minum/{id}', [App\Http\Controllers\MinumController::class, 'ditel']);
 
 });
