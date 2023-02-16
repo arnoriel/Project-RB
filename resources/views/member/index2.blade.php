@@ -36,7 +36,7 @@
         <div class="col-lg-7 position-relative about-img" style="background-image: url({{asset('Yummy/assets/img/about.jpg')}}) ;" data-aos="fade-up" data-aos-delay="150">
           <div class="call-us position-absolute">
             <h4>Mendaftar</h4>
-            <p>+62 857-9700-9915</p>
+            <p>+1 12345678910</p>
           </div>
         </div>
         <div class="col-lg-5 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
